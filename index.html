@@ -1,17 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=LLD.pdf">
-    <title>TEST PDF</title>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            var pdf = 'LLD.pdf';
-            window.location.href = pdf;
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Viewer GLTF</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body{
+      margin:0;
+      background:#202020;
+      overflow:hidden;
+    }
+
+    model-viewer{
+      width:100vw;
+      height:100vh;
+    }
+  </style>
 </head>
+
 <body>
-    <p>Si no se abre automáticamente, <a href="LLD.pdf">haz clic aquí</a> para abrir el PDF.</p>
+
+  <model-viewer
+    src="TESTGL.gltf"
+    alt="Modelo 3D"
+
+    auto-rotate
+    camera-controls
+
+    shadow-intensity="1"
+    exposure="1"
+
+    environment-image="neutral">
+
+  </model-viewer>
+
 </body>
 </html>
